@@ -1,0 +1,8 @@
+name: BedTime
+main: me.helmetk.BedTime.BedTime
+version: 0.1
+
+commands:
+    bed:
+        description: Ejecuta el BED
+        usage: /bed
