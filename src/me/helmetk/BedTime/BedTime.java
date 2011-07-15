@@ -39,11 +39,11 @@ public class BedTime extends JavaPlugin {
 			//Los strings
 			String stBed = "";
 			for(Player p:bed){
-				stBed = stBed + p.getDisplayName() + ",  ";
+				stBed = stBed + p.getDisplayName() + "  ";
 			}
 			String stNoBed = "";
 			for(Player p:nobed){
-				stNoBed = stNoBed + p.getDisplayName() + ",  ";
+				stNoBed = stNoBed + p.getDisplayName() + "  ";
 			}
 			player.sendMessage("[BedTime]");
 			player.sendMessage("Bed:");
