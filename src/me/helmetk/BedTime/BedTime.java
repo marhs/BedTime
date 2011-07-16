@@ -26,6 +26,7 @@ public class BedTime extends JavaPlugin {
 		
 		if(cmd.getName().equalsIgnoreCase("bed")){
 			Player[] players = this.getServer().getOnlinePlayers();
+			//Creo que esto no es necesario.
 			List<Player> bed = new LinkedList<Player>();
 			List<Player> nobed = new LinkedList<Player>();
 
@@ -47,8 +48,10 @@ public class BedTime extends JavaPlugin {
 			}
 			player.sendMessage("[BedTime]");
 			player.sendMessage("Bed:");
-			player.sendMessage(stBed);
+			if(stBed != "")
+				player.sendMessage(stBed);
 			player.sendMessage("No Bed:");
+			if(stNoBed != "")
 			player.sendMessage(stNoBed);
 			bed.clear();
 			nobed.clear();
