@@ -1,0 +1,12 @@
+Name: BedTime
+Version: 0.1
+Developer: Marco Herrero <hielo.helado@gmail.com>
+
+BedTime is a Bukkit (minecraft) plugin that shows you what players are in a bed.
+
+TODO:
+ - Show who is AFK
+ - Allow kick other AFK players
+ - Set a BedTime mode
+   - Warning "<User> wants a BedTime!"
+ 
