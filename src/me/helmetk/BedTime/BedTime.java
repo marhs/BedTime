@@ -7,21 +7,24 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BedTime extends JavaPlugin {
+	// El logger es el objeto que muestra mensajes en la consola.
+	// El metodo log.info(string) muestra el mensaje string en consola
 	Logger log = Logger.getLogger("Minecraft"); 
+	// Acciones ejecutadas cuando el plugin se activa
 	public void onEnable(){
-		log.info("BedTime has been enabled");
+		log.info("[BedTime] Enabled");
 	}
+	// Cuando se desactiva
 	public void onDisable(){
-		log.info("BedTime has been disabled");
+		log.info("[BedTime] Disabled");
 	}
+	// En este método configuramos los diferentes comandos que puede tener el plugin
 	public boolean onCommand(	CommandSender sender,
 								Command cmd, 
 								String commandLabel, 
 								String[] args){
-		// Si el jugador escribe el comando /bed hace el doSomething
-		
+				
 		Player player = (Player) sender;
-		
 		if(cmd.getName().equalsIgnoreCase("bed")){
 			Player[] players = this.getServer().getOnlinePlayers();
 			String stBed = "";
