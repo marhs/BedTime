@@ -1,7 +1,5 @@
 package me.helmetk.BedTime;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.logging.Logger;
 
 import org.bukkit.command.*;
@@ -26,26 +24,16 @@ public class BedTime extends JavaPlugin {
 		
 		if(cmd.getName().equalsIgnoreCase("bed")){
 			Player[] players = this.getServer().getOnlinePlayers();
-			//Creo que esto no es necesario.
-			List<Player> bed = new LinkedList<Player>();
-			List<Player> nobed = new LinkedList<Player>();
-
+			String stBed = "";
+			String stNoBed = "";
 			for(Player p:players){
 				if(p.isSleeping())
-					bed.add(p);
+					stBed = stBed + p.getDisplayName() + "  ";
 				else
-					nobed.add(p);
+					stNoBed = stNoBed + p.getDisplayName() + "  ";
 					
 			}
-			//Los strings
-			String stBed = "";
-			for(Player p:bed){
-				stBed = stBed + p.getDisplayName() + "  ";
-			}
-			String stNoBed = "";
-			for(Player p:nobed){
-				stNoBed = stNoBed + p.getDisplayName() + "  ";
-			}
+			
 			player.sendMessage("[BedTime]");
 			player.sendMessage("Bed:");
 			if(stBed != "")
@@ -53,8 +41,7 @@ public class BedTime extends JavaPlugin {
 			player.sendMessage("No Bed:");
 			if(stNoBed != "")
 			player.sendMessage(stNoBed);
-			bed.clear();
-			nobed.clear();
+
 			return true;
 		}
 		
