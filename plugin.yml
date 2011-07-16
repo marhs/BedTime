@@ -4,5 +4,5 @@ version: 0.1
 
 commands:
     bed:
-        description: Ejecuta el BED
+        description: Show who is in a bed.
         usage: /bed
