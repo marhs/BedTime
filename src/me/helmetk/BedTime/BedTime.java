@@ -18,14 +18,14 @@ public class BedTime extends JavaPlugin {
 	public void onDisable(){
 		log.info("[BedTime] Disabled");
 	}
-	// En este metodo configuramos los diferentes comandos que puede tener el plugin
+	// En este método configuramos los diferentes comandos que puede tener el plugin
 	public boolean onCommand(	CommandSender sender,
 								Command cmd, 
 								String commandLabel, 
 								String[] args){
 				
 		Player player = (Player) sender;
-		if(cmd.getName().equalsIgnoreCase("bed")) {
+		if(cmd.getName().equalsIgnoreCase("bed")){
 			Player[] players = this.getServer().getOnlinePlayers();
 			String stBed = "";
 			String stNoBed = "";
@@ -45,11 +45,6 @@ public class BedTime extends JavaPlugin {
 			if(stNoBed != "")
 			player.sendMessage(stNoBed);
 
-			return true;
-		}
-		if(cmd.getName().equalsIgnoreCase("arbol")) {
-			player.setLevel(99);
-			player.sendMessage("Todo bien");
 			return true;
 		}
 		
